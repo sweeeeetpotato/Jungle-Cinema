@@ -1,0 +1,33 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+}
+
+dt,dd {
+  display: inline-block;
+}
+
+%footer_layout {
+  width: 60%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+%main_head_layout {
+  width: 50%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@mixin bg-icon($url, $size) {
+  display: inline-block;
+  vertical-align: top;
+  background-image: url($url);
+  background-size: $size;
+  background-repeat: no-repeat;
+}
+
+@mixin txt-ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

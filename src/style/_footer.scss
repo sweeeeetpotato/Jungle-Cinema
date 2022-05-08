@@ -1,0 +1,84 @@
+.footer {
+  background: $bg-Gray6;
+}
+
+//회사 관련 링크
+.cont-company_link {
+  @extend %footer_layout;
+  display: flex;
+  padding: 53px 0 42px;
+  border-bottom: 1px solid $hr-color;
+
+  .link-jungle_cinema {
+    display: inline-block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+  }
+  .list-SNS_link {
+    display: flex;
+    margin-left: auto;
+  }
+}
+.list-SNS_link {
+  .link-SNS {
+    width: 24px;
+    height: 24px;
+    margin-left: 22px;
+    @include bg-icon("../images/icon_sprites.png", 72px 24px);
+
+    &.left {
+      background-position-x: left;
+    }
+    &.center {
+      background-position-x: center;
+    }
+    &.right {
+      background-position-x: right;
+    }
+  }
+}
+
+//회사 정보 
+.cont-company_info {
+  @extend %footer_layout;
+  display: flex;
+  padding: 36px 0 38px;
+  font-family: 'Noto Sans KR';
+  font-size: 14px;
+  line-height: 1.4;
+  color: $font-Gray2;
+
+  .list-company_info {
+    display: flex;
+  }
+  .copyright {
+    margin-left: auto;
+    font-weight: 700;
+  }
+}
+
+.list-company_info {
+  div {
+    position: relative;
+    padding-right: 10px;
+    margin-right: 10px;
+
+    &::after {
+      content: '';
+      width: 1px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $font-Gray2;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+  }
+
+  dt,.bold {
+    font-weight: 700;
+  }
+}
